@@ -58,6 +58,8 @@ body{
     width: 90%;
     position: relative;
     bottom: 40px;
+    color: white;
+    font-weight: 600;
 }
 
 .instruction{
