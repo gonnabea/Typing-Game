@@ -37,9 +37,9 @@ function handlehideSetting(){
 }
 
 function handleTyping(e){
-    
-    if(e.target.value === keyword.innerHTML){
-        e.target.value = null;
+    const insertedText = e.target.value;
+    if(insertedText === keyword.innerHTML){
+        answerInput.value = "";
         leftTime.innerHTML = `남은시간: ${time+=difficultyIndex}`;
         score.innerHTML = `스코어: ${scoreValue+=1}`;
         console.log(time)
