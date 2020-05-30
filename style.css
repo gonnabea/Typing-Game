@@ -97,12 +97,22 @@ body{
 
 .finished{
     display: none;
+    flex-direction: column;
+    background-color:#735BC1;
+    width: 350px;
+    height: 400px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px white;
 }
 
 .setting-btn{
     position: absolute;
     bottom: 10px;
     left: 30px;
+    font-size: 30px;
+    color: #34495E;
+    font-weight: 700;
 }
 
 @keyframes showSetting{

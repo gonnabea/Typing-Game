@@ -15,7 +15,7 @@ interval = setInterval(timer,1000)
 
 let time = 10,
 scoreValue = 0,
-difficultyIndex = 3;
+difficultyIndex = 2;
 
 function showKeyword(){
     const randomNum = Math.floor(Math.random()*words.length)
@@ -39,11 +39,11 @@ function handlehideSetting(){
 function handleTyping(e){
     
     if(e.target.value === keyword.innerHTML){
-        showKeyword()
+        e.target.value = null;
         leftTime.innerHTML = `남은시간: ${time+=difficultyIndex}`;
         score.innerHTML = `스코어: ${scoreValue+=1}`;
         console.log(time)
-        e.target.value = null;
+        showKeyword()
     }
 }
 
@@ -72,7 +72,7 @@ function handleFinish(){
     finished.style.display = "flex";
     const finalScore = document.getElementById("finalScore"),
     reloadBtn = document.getElementById("reloadBtn");
-    finalScore.innerHTML = scoreValue;
+    finalScore.innerHTML = `최종 스코어: ${scoreValue}`;
     reloadBtn.addEventListener("click", handleRestart)
 }
 
