@@ -90,7 +90,7 @@ function handleRestart(){
 function init(){
     showKeyword()
     settingBtn.addEventListener("click", handleSettingBtn);
-    answerInput.addEventListener("input", handleTyping);
+    answerInput.addEventListener("textInput", handleTyping);
     difficulty.addEventListener("change", handleDifficulty);
 }
 
